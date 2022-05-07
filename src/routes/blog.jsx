@@ -1,8 +1,15 @@
+import { Outlet } from "react-router";
+import { Link } from "react-router-dom";
+
 function Blog() {
   return (
-    <main>
-      <h2>Du er på Blog!</h2>
-    </main>
+    <div>
+      Blog -layout, plus link til BlogPosts:
+      <main>
+        <Link to="blogpost">Se Blog Posts!</Link>
+      </main>
+      <Outlet />
+    </div>
   );
 }
 

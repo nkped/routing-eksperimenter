@@ -9,6 +9,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Om from "./routes/om";
 import Home from "./routes/home";
 import Blog from "./routes/blog";
+import BlogPost from "./routes/blogpost";
+import BlogLayout from "./routes/bloglayout";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,7 +20,11 @@ root.render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="om" element={<Om />} />
-          <Route path="blog" element={<Blog />} />
+          <Route path="blog" element={<Blog />}>
+            <Route index element={<BlogLayout />} />
+            <Route path=":blogpostId" element={<BlogPost />} />
+            <Route />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

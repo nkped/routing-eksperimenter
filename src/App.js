@@ -4,13 +4,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      App - layout, plus 3 top nav-links:
       <nav>
-        <Link to="om">Om</Link>
-        <Link to="blog">Blog</Link>
+        <Link to="/">Home</Link>
+        <Link to="/om">Om</Link>
+        <Link to="/blog">Blog</Link>
       </nav>
-      <div>
-        <h1>Du er på App.js</h1>
-      </div>
       <Outlet />
     </div>
   );

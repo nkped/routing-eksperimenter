@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      App - layout, plus 3 top nav-links:
+      App layout- div, plus 3 top nav-links:
       <nav>
         <Link to="/">Home</Link>
         <Link to="/om">Om</Link>

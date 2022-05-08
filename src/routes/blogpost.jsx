@@ -1,7 +1,11 @@
+import { useParams } from "react-router";
+
 function BlogPost() {
+  let params = useParams();
+
   return (
     <main>
-      <h2>Du er på BlogPost!</h2>
+      <h2>{params.blogpostId}</h2>
     </main>
   );
 }

@@ -1,17 +1,19 @@
-import { Link } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { getBlogPosts } from "../data";
 
 export default function Blog() {
   let blogPosts = getBlogPosts();
   return (
     <div>
+      Blog layout-div, plus dynamiske links.
       <nav>
         {blogPosts.map((blogPost) => (
-          <Link to={`/blog/${blogPost.number}`} key={blogPost.number}>
+          <NavLink to={`/blog/${blogPost.number}`} key={blogPost.number}>
             {blogPost.name}
-          </Link>
+          </NavLink>
         ))}
       </nav>
+      <Outlet />
     </div>
   );
 }

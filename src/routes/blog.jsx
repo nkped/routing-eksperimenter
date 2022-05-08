@@ -1,16 +1,17 @@
-import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
+import { getBlogPosts } from "../data";
 
-function Blog() {
+export default function Blog() {
+  let blogPosts = getBlogPosts();
   return (
     <div>
-      Blog -layout, plus link til BlogPosts:
-      <main>
-        <Link to="blogpost">Se Blog Posts!</Link>
-      </main>
-      <Outlet />
+      <nav>
+        {blogPosts.map((blogPost) => (
+          <Link to={`/blog/${blogPost.number}`} key={blogPost.number}>
+            {blogPost.name}
+          </Link>
+        ))}
+      </nav>
     </div>
   );
 }
-
-export default Blog;

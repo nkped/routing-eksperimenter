@@ -4,5 +4,6 @@ let blogPosts = [
   { name: "Third Post", number: 3 },
 ];
 
-
-export default function getBlogPosts();
+export function getBlogPosts() {
+  return blogPosts;
+}
